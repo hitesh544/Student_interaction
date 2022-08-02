@@ -1,0 +1,208 @@
+.main-team{
+    display:flex;
+    align-items:center;
+    position: relative;
+
+    @media screen and(max-width:767.98px){
+        height:100%;
+    }
+
+    .heading{
+        display:inline-block;
+        margin:1.25rem 0;
+        position: relative;
+        
+        h2{
+            font-size:1.875rem;
+            color:$background-color;
+            text-transform:uppercase;
+            letter-spacing:-.1px;
+            display:block;
+            font-weight:600;
+            position: relative;
+            padding-bottom:.3125rem;
+
+            &::before{
+                position: absolute;
+                content:"";
+                left:0;
+                bottom:0;
+                width:40%;
+                height:.25rem;
+                background:$icons-color;
+            }
+
+            @media screen and(max-width:575.98px){
+                font-size:1.25rem;
+            }
+        }
+    }
+
+    .wrapper{
+        margin:1.25rem 0;
+        display:block;
+
+        .team-card{
+            position: relative;
+            display:block;
+            width:100%;
+            height:100%;
+            box-shadow: 0px 10px 30px 0px rgba(0, 46, 40, 0.1);
+            overflow: hidden;
+
+            &:hover{
+                figure{
+                    &::before{
+                        display:block;
+                    }
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+                .social-media{
+                    opacity:1;
+                    visibility: visible;
+                }
+
+                .content-box{
+                    background:$icons-color;
+
+                    h4{
+                        color:$color-primary
+                    }
+
+                    span{
+                        color:$color-primary
+                    }
+
+                    .line{
+                        background:$color-primary;
+                    }
+                }
+            }
+            
+            figure{
+                position: relative;
+                margin:0;
+                transform: scale(1);
+                transition:all ease-in-out .5s;
+                overflow: hidden;
+
+                &::before{
+                    position: absolute;
+                    content:"";
+                    left:0;
+                    top:0;
+                    height:100%;
+                    width:100%;
+                    background:rgba(0,0,0,.2);
+                    display:block;
+                    z-index:1;
+                    display:none;
+                }
+
+                img{
+                    width:100%;
+                    transition: all ease .5s;
+                    transform: scale(1);
+                }
+
+                .social-media{
+                    position: absolute;
+                    bottom:0;
+                    top:50%;
+                    right:0;
+                    left:0;
+                    width:100%;
+                    padding:.625rem .125rem;
+                    display:block;
+                    z-index:2;
+                    text-align:center;
+                    transition:all ease-in-out .5s;
+                    opacity:0;
+                    visibility: hidden;
+
+                    ol{
+                        li{
+                            display:inline-block;
+                            margin:0 .3125rem;
+                            position: relative;
+                            height:2.25rem;
+                            width:2.25rem;
+                            background-color:transparent;
+                            border:1px solid #eaecec;
+                            border-radius:50%;
+                            line-height:2.25rem;
+                            transition:all .5s;
+                            transform: scale(1);
+                            overflow: hidden;
+
+                            &:hover{
+                                transform:scale(1.1);
+                                background:rgba($icons-color, .6);
+
+                                a{
+                                    color:$color-primary;
+                                    transform:scale(.9);
+                                }
+                            }
+
+                            a{
+                                color:$color-primary;
+                                font-size:.875rem;
+                                transition:all ease-in-out .6s;
+                                transform:scale(1);
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                height:100%;
+                                width:100%;
+                                position: absolute;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content-box{
+                position: relative;
+                padding:1.25rem 1.5625rem;
+                background:$color-primary;
+                text-align:center;
+                display:block;
+                transition:all ease-in .5s;
+
+                h4{
+                    font-size:1.25rem;
+                    color:$background-color;
+                    margin:.3125rem 0  0;
+                    display:inline-block;
+                    text-transform:capitalize;
+                    font-weight:500;
+                    transition:all ease-in .5s;
+
+                    @media screen and(max-width:575.98px){
+                        font-size:1.125rem;
+                    }
+                }
+
+                span{
+                    display:block;
+                    margin:.3125rem 0;
+                    font-size:.9375rem;
+                    transition:all ease-in .5s;
+                }
+
+                .line{
+                    display:inline-block;
+                    height:.0625rem;
+                    width:100%;
+                    margin:.3125rem 0;
+                    background:#eaecec;
+                    transition:all ease-in .5s;
+                }
+            }
+        }
+    }
+}
